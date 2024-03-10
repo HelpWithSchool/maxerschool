@@ -31,12 +31,6 @@ app.get('/gms', (req, res) => {
 app.get('/lessons', (req, res) => {
   res.sendFile(path.join(process.cwd(), './static/agloader.html'));
 });
-app.get('/credits', (req, res) => {
-  res.sendFile(path.join(process.cwd(), './static/credits.html'));
-});
-app.get('/partners', (req, res) => {
-  res.sendFile(path.join(process.cwd(), './static/partners.html'));
-});
 app.use((req, res) => {
   res.statusCode = 404;
   res.sendFile(path.join(process.cwd(), './static/404.html'))
